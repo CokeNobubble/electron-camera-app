@@ -19,6 +19,10 @@ export default defineConfig({
         '@renderer': resolve('src/renderer/src')
       }
     },
+    server: {
+      port: 3000,
+      proxy: {}
+    },
     plugins: [
       vue(),
       UnoCSS(),
@@ -26,7 +30,7 @@ export default defineConfig({
         resolvers: [ElementPlusResolver()],
         imports: ['vue', 'pinia'],
         eslintrc: {
-          enabled: false,
+          enabled: true,
           filepath: './.eslintrc-auto-import.json',
           globalsPropValue: true
         }

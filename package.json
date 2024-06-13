@@ -26,6 +26,7 @@
     "electron-updater": "^6.1.7",
     "element-plus": "^2.7.5",
     "pinia": "^2.1.7",
+    "pinia-plugin-persistedstate": "^3.2.1",
     "reset-css": "^5.0.2"
   },
   "devDependencies": {
