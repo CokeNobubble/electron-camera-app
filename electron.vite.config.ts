@@ -29,14 +29,16 @@ export default defineConfig({
       AutoImport({
         resolvers: [ElementPlusResolver()],
         imports: ['vue', 'pinia'],
-        eslintrc: {
-          enabled: true,
-          filepath: './.eslintrc-auto-import.json',
-          globalsPropValue: true
-        }
+        dts: './src/types/auto-imports.d.ts'
+        // eslintrc: {
+        //   enabled: true,
+        //   filepath: './.eslintrc-auto-import.json',
+        //   globalsPropValue: true
+        // }
       }),
       Components({
-        resolvers: [ElementPlusResolver()]
+        resolvers: [ElementPlusResolver()],
+        dts: './src/types/components.d.ts'
       })
     ]
   }

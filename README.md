@@ -35,3 +35,5 @@ $ pnpm build:mac
 # For Linux
 $ pnpm build:linux
 ```
+### 关于自动导入vue，pinia，组件等插件
+在electron.vite.config.ts中配置dts路径必须在renderer的src目录里，否则编译器会提示爆红
