@@ -8,7 +8,8 @@ module.exports = {
     '@electron-toolkit',
     '@electron-toolkit/eslint-config-ts/eslint-recommended',
     '@vue/eslint-config-typescript/recommended',
-    '@vue/eslint-config-prettier'
+    '@vue/eslint-config-prettier',
+    './.eslintrc-auto-import.json'
   ],
   rules: {
     'vue/require-default-prop': 'off',
