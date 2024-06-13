@@ -1,17 +1,13 @@
 <script setup lang="ts">
-import { useCameraSettingStroe } from '@renderer/store/cameraSetting';
-import { storeToRefs } from 'pinia';
-
-
-const ipcHandle = () => window.electron.ipcRenderer.send('ping')
-const cameraSettingStore = useCameraSettingStroe()
-const { count } = storeToRefs(cameraSettingStore)
-const { increment } = cameraSettingStore
+// const ipcHandle = () => window.electron.ipcRenderer.send('ping')
+// 退出
+const quit = () => {
+  window.api.quit()
+}
 </script>
 
 <template>
-  <div>
-    <h1>{{ count }}</h1>
-    <button @click="increment">加法</button>
-  </div>
+  <Suspense>
+    <div class="w-full h-full" @contextmenu="quit"></div>
+  </Suspense>
 </template>

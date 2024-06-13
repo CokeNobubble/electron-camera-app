@@ -1,6 +1,7 @@
 // import './assets/main.css'
 import 'virtual:uno.css'
 import 'reset-css'
+import './assets/main.css'
 
 // pinia
 import { createPinia } from 'pinia'
