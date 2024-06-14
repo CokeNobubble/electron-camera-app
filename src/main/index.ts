@@ -2,19 +2,22 @@ import { app, shell, BrowserWindow, ipcMain } from 'electron'
 import { join } from 'path'
 import { electronApp, optimizer, is } from '@electron-toolkit/utils'
 import icon from '../../resources/icon.png?asset'
+import dragWindow from './dragWindow'
 
 import './quit'
+import './windowShape'
 function createWindow(): void {
   // Create the browser window.
   const mainWindow = new BrowserWindow({
-    width: 800,
-    height: 700,
+    width: 500,
+    height: 280,
     show: false,
-    // alwaysOnTop: true, //  窗口是否永远在别的窗口的上面
+    alwaysOnTop: true, //  窗口是否永远在别的窗口的上面
     transparent: true, //  透明
     autoHideMenuBar: true,
-    // x: 20, // 窗口初始位置x
-    // y: 650, // 窗口初始位置y
+    frame: false, // 隐藏菜单栏 隐藏后无法拖动
+    x: 1200, // 窗口初始位置x
+    y: 650, // 窗口初始位置y
     // skipTaskbar: true, // 是否在任务栏中显示
     ...(process.platform === 'linux' ? { icon } : {}),
     webPreferences: {
@@ -22,6 +25,9 @@ function createWindow(): void {
       sandbox: false
     }
   })
+
+  // 拖拽窗口
+  dragWindow(mainWindow)
 
   mainWindow.on('ready-to-show', () => {
     mainWindow.show()

@@ -12,3 +12,8 @@ ipcMain.on('quit', () => {
   const menu = Menu.buildFromTemplate(template)
   menu.popup()
 })
+
+// 点击关闭图标，退出应用
+ipcMain.on('exit', () => {
+  app.quit()
+})

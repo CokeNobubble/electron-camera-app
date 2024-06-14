@@ -7,6 +7,11 @@ export {}
 /* prettier-ignore */
 declare module 'vue' {
   export interface GlobalComponents {
-    Versions: typeof import('./../components/Versions.vue')['default']
+    Camera: typeof import('./../components/Camera.vue')['default']
+    ElColorPicker: typeof import('element-plus/es')['ElColorPicker']
+    ElInputNumber: typeof import('element-plus/es')['ElInputNumber']
+    ElOption: typeof import('element-plus/es')['ElOption']
+    ElSelect: typeof import('element-plus/es')['ElSelect']
+    Setting: typeof import('./../components/Setting.vue')['default']
   }
 }
