@@ -10,10 +10,10 @@ export const useCameraSettingStore = defineStore(
   () => {
     const config = ref<IConfig>({
       deviceId: '', // 摄像头ID
-      page: 'setting', // 摄像头页面
+      page: 'camera', // 摄像头页面
       borderWidth: 0, // 边框宽度
       borderColor: '#fff', // 边框颜色
-      rounded: false // 窗口形状 -->圆角/方形 true/false 默认方形/false
+      rounded: true // 窗口形状 -->圆角/方形 true/false 默认方形/false
     })
 
     const setConfig = <T extends keyof IConfig, K extends IConfig[T]>(key: T, value: K): void => {

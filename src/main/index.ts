@@ -9,8 +9,8 @@ import './windowShape'
 function createWindow(): void {
   // Create the browser window.
   const mainWindow = new BrowserWindow({
-    width: 500,
-    height: 280,
+    width: 300,
+    height: 300,
     show: false,
     alwaysOnTop: true, //  窗口是否永远在别的窗口的上面
     transparent: true, //  透明
@@ -18,7 +18,7 @@ function createWindow(): void {
     frame: false, // 隐藏菜单栏 隐藏后无法拖动
     x: 1200, // 窗口初始位置x
     y: 650, // 窗口初始位置y
-    // skipTaskbar: true, // 是否在任务栏中显示
+    // skipTaskbar: true, // 是否在 任务栏中显示
     ...(process.platform === 'linux' ? { icon } : {}),
     webPreferences: {
       preload: join(__dirname, '../preload/index.js'),

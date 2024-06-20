@@ -28,7 +28,7 @@ export default defineConfig({
       UnoCSS(),
       AutoImport({
         resolvers: [ElementPlusResolver()],
-        imports: ['vue', 'pinia', '@vueuse/core'],
+        imports: ['vue', 'pinia'],
         dts: './src/types/auto-imports.d.ts'
         // eslintrc: {
         //   enabled: true,
@@ -40,6 +40,7 @@ export default defineConfig({
         resolvers: [ElementPlusResolver()],
         dts: './src/types/components.d.ts'
       })
-    ]
+    ],
+    build: {}
   }
 })

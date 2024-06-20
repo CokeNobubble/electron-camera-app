@@ -4,6 +4,7 @@
   "description": "An Electron application with Vue and TypeScript",
   "main": "./out/main/index.js",
   "author": "example.com",
+  "productName": "LeeCamera",
   "homepage": "https://electron-vite.org",
   "scripts": {
     "format": "prettier --write .",
@@ -24,7 +25,6 @@
     "@electron-toolkit/preload": "^3.0.0",
     "@electron-toolkit/utils": "^3.0.0",
     "@icon-park/vue-next": "^1.4.2",
-    "@vueuse/core": "^10.11.0",
     "electron-updater": "^6.1.7",
     "element-plus": "^2.7.5",
     "pinia": "^2.1.7",

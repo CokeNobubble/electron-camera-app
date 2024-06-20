@@ -1,15 +1,13 @@
 # electron-camera-app
+一个使用Electron和Vue3、TS开发的一个摄像头小工具
 
-An Electron application with Vue and TypeScript
+## 环境
+node version:18.20.2
+pnpm:9.1.0
 
 ## 技术栈
 vue3 vite electron unocss pinia
 
-## Recommended IDE Setup
-
-- [VSCode](https://code.visualstudio.com/) + [ESLint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint) + [Prettier](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin)
-
-## Project Setup
 
 ### Install
 
@@ -23,7 +21,7 @@ $ pnpm install
 $ pnpm dev
 ```
 
-### Build
+### 打包
 
 ```bash
 # For windows

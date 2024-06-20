@@ -12,7 +12,7 @@ console.log(cameras, '过滤出的所有相机设备')
 
 <template>
   <div
-    class="w-full h-full bg-#2C3E50 flex flex-col items-center box-border justify-between gap-10px p-10px"
+    class="w-full h-full bg-#666 flex flex-col items-center box-border justify-between gap-10px p-10px"
   >
     <div
       class="flex flex-col justify-center items-center gap-5px cursor-pointer"
