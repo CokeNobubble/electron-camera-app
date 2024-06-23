@@ -29,6 +29,8 @@ const goSettingPage = () => {
 }
 
 onMounted(() => {
+  console.log(config.value.deviceId,"🚀");
+  
   const constraints = {
     audio: false,
     video: {

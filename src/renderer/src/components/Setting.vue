@@ -8,11 +8,16 @@ const deviceValue = ref('')
 const devices = await navigator.mediaDevices.enumerateDevices()
 const cameras = devices.filter((item) => item.kind.includes('video'))
 console.log(cameras, '过滤出的所有相机设备')
+
+
+const selectCamera = (id:string)=>{
+  config.value.deviceId = id
+}
 </script>
 
 <template>
   <div
-    class="w-full h-full bg-#666 flex flex-col items-center box-border justify-between gap-10px p-10px"
+    class="w-full h-full bg-#1A1B26 flex flex-col items-center box-border justify-between gap-10px p-10px"
   >
     <div
       class="flex flex-col justify-center items-center gap-5px cursor-pointer"
@@ -22,7 +27,7 @@ console.log(cameras, '过滤出的所有相机设备')
       <span class="c-#f6f6f6 text-14px">参数设置</span>
     </div>
     <div class="w-full flex-1 flex flex-col gap-15px">
-      <el-select v-model="deviceValue" placeholder="请选择摄像头">
+      <el-select v-model="deviceValue" placeholder="请选择摄像头" @change="selectCamera">
         <el-option
           v-for="item in cameras"
           :key="item.deviceId"
@@ -39,6 +44,6 @@ console.log(cameras, '过滤出的所有相机设备')
         <el-color-picker v-model="config.borderColor" />
       </div>
     </div>
-    <div class="c-yellow">Author : Lee</div>
+    <div class="c-#46C3FF">Author : Lee</div>
   </div>
 </template>
